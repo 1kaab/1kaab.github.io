@@ -66,6 +66,21 @@ nav {
   gap: 2rem;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.nav-gh-icon {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+.nav-gh-icon:hover { color: var(--accent-hi); text-decoration: none; }
+.nav-gh-icon svg { display: block; }
+
 .nav-logo {
   font-family: var(--font-serif);
   font-size: 1.25rem;
