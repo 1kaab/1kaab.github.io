@@ -33,7 +33,6 @@
 
   <!-- Hero -->
   <section id="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="container">
       <p class="eyebrow">audio · motion · ocean</p>
       <h1>Learning a motion<br>from the Sound</h1>
@@ -96,7 +95,7 @@
       <div class="illustration-grid">
         <a href="assets/img/engine-1.png" class="illustration-slot" target="_blank" rel="noopener"><img src="assets/img/engine-1.png" alt=""></a>
         <a href="assets/img/engine-2.png" class="illustration-slot" target="_blank" rel="noopener"><img src="assets/img/engine-2.png" alt=""></a>
-        <a href="assets/img/engine-3.png" class="illustration-slot" target="_blank" rel="noopener">—<img src="assets/img/engine-3.png" alt=""></a>
+        <a href="assets/img/engine-3.png" class="illustration-slot" target="_blank" rel="noopener"><img src="assets/img/engine-3.png" alt=""></a>
       </div>
     </div>
   </section>
@@ -162,7 +161,7 @@
       </div>
 
       <div class="illustration-grid">
-        <a href="assets/img/install-1.jpg" class="illustration-slot" target="_blank" rel="noopener">—</a>
+        <a href="assets/img/install-1.png" class="illustration-slot" target="_blank" rel="noopener"><img src="assets/img/install-1.png" alt=""></a>
         <a href="assets/img/install-2.jpg" class="illustration-slot" target="_blank" rel="noopener">—</a>
         <a href="assets/img/install-3.jpg" class="illustration-slot" target="_blank" rel="noopener">—</a>
       </div>
@@ -179,77 +178,5 @@
     </div>
   </footer>
 
-  <script src="assets/run_data.js"></script>
-  <script>
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const canvas = document.getElementById('hero-canvas');
-    const ctx    = canvas.getContext('2d');
-    const BG     = 'rgba(15,13,10,0.045)'; // slow fade — hysteresis memory
-    let W, H;
-
-    function resize() {
-      W = canvas.width  = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
-      ctx.fillStyle = '#0f0d0a';
-      ctx.fillRect(0, 0, W, H);
-    }
-    window.addEventListener('resize', resize);
-    resize();
-
-    // Bioluminescent color — z [0,1] maps violet→cyan→green→amber
-    function bioColor(z, alpha) {
-      let h;
-      if      (z < 0.35) h = 260 - (z / 0.35) * 80;   // violet → cyan
-      else if (z < 0.65) h = 180 - ((z - 0.35) / 0.3) * 40; // cyan → green
-      else               h = 140 - ((z - 0.65) / 0.35) * 100; // green → amber
-      return `hsla(${h | 0},72%,58%,${alpha.toFixed(2)})`;
-    }
-
-    let cursor = 1;
-    const STEP = 2; // points per frame — ~12 s per full loop at 60 fps
-
-    function draw() {
-      // Fade trail — acts as hysteresis: old strokes decay slowly
-      ctx.fillStyle = BG;
-      ctx.fillRect(0, 0, W, H);
-
-      for (let s = 0; s < STEP; s++) {
-        const prev = RUN_DATA[cursor - 1];
-        const curr = RUN_DATA[cursor];
-
-        const x0 = prev[0] * W,  y0 = prev[1] * H;
-        const x1 = curr[0] * W,  y1 = curr[1] * H;
-        const z   = curr[2];
-        const fov = curr[3]; // 0 = narrow FOV (focused), 1 = wide
-
-        // Focused (low FOV) = brighter, thicker — like medium phase at high activity
-        const alpha = 0.45 + (1 - fov) * 0.4;
-        const lw    = 0.7  + (1 - fov) * 1.3;
-
-        ctx.beginPath();
-        ctx.moveTo(x0, y0);
-        ctx.lineTo(x1, y1);
-        ctx.strokeStyle = bioColor(z, alpha);
-        ctx.lineWidth   = lw;
-        ctx.lineCap     = 'round';
-        ctx.stroke();
-
-        cursor++;
-        if (cursor >= RUN_DATA.length) {
-          cursor = 1;
-          // Brief dark flush at loop point — resets the geometry
-          ctx.fillStyle = 'rgba(15,13,10,0.4)';
-          ctx.fillRect(0, 0, W, H);
-        }
-      }
-
-      requestAnimationFrame(draw);
-    }
-
-    draw();
-  })();
-  </script>
 </body>
 </html>
