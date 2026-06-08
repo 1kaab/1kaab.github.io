@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonolumos — Audio-Driven Motion Synthesis</title>
-  <meta name="description" content="Open-source toolkit for translating live audio into spatial motion parameters. Physics-based, expressive, free.">
+  <title>Sonolumos</title>
+  <meta name="description" content="Can sound sources from ocean life inform motion in a way that is special to the species? An ecosystem has arisen for this task to grow.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -12,226 +12,158 @@
 </head>
 <body>
 
-  <!-- ── Navigation ── -->
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo">Sonolumos</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#open-source">Open Source</a></li>
-        <li><a href="#donate">Support</a></li>
-        <li><a href="https://1kaab.github.io/sonolumos-docs" target="_blank" rel="noopener">Docs</a></li>
+        <li><a href="#engine">Engine</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#synth">Synth</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="https://github.com/1kaab/sonolumos" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ── Hero ── -->
+  <!-- Hero -->
   <section id="hero">
     <div class="container">
-      <p class="eyebrow">Open Source · Audio-to-Motion</p>
-      <h1>Sound becomes<br>movement</h1>
+      <p class="eyebrow">audio · motion · ocean</p>
+      <h1>Learning a motion<br>from the Sound</h1>
       <p class="tagline">
-        Sonolumos translates live audio into expressive spatial motion—
-        geometry, physics, memory—designed for performers, researchers,
-        and anyone who wants sound to move things.
+        Using sound sources from ocean life animals, can we obtain objectives
+        that can inform the motion of a sound in an intelligible way such that
+        the motion transformation becomes special to the species or any other classifier?
       </p>
+      <p class="hero-sig">an ecosystem has arisen for this task to grow. — sonolumos</p>
       <div class="cta-row">
-        <a href="https://github.com/1kaab/sonolumos" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
-        <a href="#about" class="btn btn-outline">Learn more</a>
+        <a href="https://github.com/1kaab/sonolumos" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
+        <a href="#engine" class="btn btn-outline">Read more</a>
       </div>
-
-      <div class="demo-frame">
-        &mdash; demo video placeholder &mdash;
-      </div>
-      <p class="demo-caption">Live performance session — Sonolumos driving camera motion from acoustic input</p>
     </div>
   </section>
 
-  <!-- ── About ── -->
-  <section id="about">
+  <!-- Engine -->
+  <section id="engine">
     <div class="container">
-      <h3>What it is</h3>
-      <h2>Physics-based audio<br>motion synthesis</h2>
+      <h3>engine</h3>
+      <h2>sound becomes motion</h2>
       <p>
-        Sonolumos is a real-time signal processing toolkit that maps audio features—
-        spectral centroid, RMS energy, onset flux—through a layered physical model
-        to produce continuous motion parameters.
-      </p>
-      <p>
-        The pipeline is modular: <strong>Geometry</strong> shapes the raw feature signal,
-        <strong>Medium</strong> introduces inertia and damping, and
-        <strong>Hysteresis</strong> adds memory and threshold behaviour.
-        Each stage can be tuned independently or bypassed.
-      </p>
-      <p>
-        Output goes wherever you need it—OSC, MIDI, CSV, or directly into a
-        connected host via the 44 plugin bridge.
+        A motion engine. Sound signals become motion signals. Using spectral
+        analysis, a parameter space consists of three phases — each one a
+        separate space, all operating within a single unified field.
+        This is where sonolumos does its work.
       </p>
 
+      <div class="phase-grid">
+        <div class="phase-item">
+          <p class="phase-label">Geometry</p>
+          <h4>Fingerprint</h4>
+          <p>The fingerprint of the signal — invariant when using the same
+          spectral feature. Signals map onto color 3D space models inspired
+          by bioluminescent spectral ranges.</p>
+        </div>
+        <div class="phase-item">
+          <p class="phase-label">Medium</p>
+          <h4>Oscillation</h4>
+          <p>Oscillations in relation to the signal. The mode of transfer —
+          from signal into synthesizer into plate.</p>
+        </div>
+        <div class="phase-item">
+          <p class="phase-label">Hysteresis</p>
+          <h4>Memory</h4>
+          <p>The memory of the signal transfer function. Threshold behaviour,
+          saturation, and entropy.</p>
+        </div>
+      </div>
+
+      <div class="analogy">
+        <p>
+          ice, water, vapor — Geometry is a frozen state. Medium changes it,
+          and is the mode of transfer. Hysteresis is much higher in entropy.
+          The engine evolves with these phase relations as separate spaces,
+          unified.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analysis -->
+  <section id="analysis">
+    <div class="container">
+      <h3>analysis tool</h3>
+      <h2>evolutionary training</h2>
+      <p>
+        Set objectives. Run trainings. Visualize and compare.
+        An evolutionary search over the GMH parameter space, guided by
+        objectives chosen for the signal at hand — starting from the species.
+      </p>
+    </div>
+  </section>
+
+  <!-- Synthesizer -->
+  <section id="synth">
+    <div class="container">
+      <h3>synthesizer</h3>
+      <h2>karamuto model</h2>
+      <p>
+        An LFO that latches to the input using the karamuto model.
+        The synthesis voice layer, in series with the physical plate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Installation -->
+  <section id="installation">
+    <div class="container">
+      <h3>physical installation</h3>
+      <h2>light, plate<br>&amp; lens-focus</h2>
+      <p>FLP — three modalities, one physical output.</p>
       <div class="features">
         <div class="feature-item">
-          <h4>Streaming pipeline</h4>
-          <p>Process microphone or line input in real time, frame by frame,
-          with sub-50 ms latency at typical chunk sizes.</p>
+          <h4>Light</h4>
+          <p>Color space 3D models mapped to bioluminescent spectral ranges.
+          The light source is the sound.</p>
         </div>
         <div class="feature-item">
-          <h4>Geometry · Medium · Hysteresis</h4>
-          <p>Three independent physics stages per parameter route.
-          Inertia, viscosity, memory, and gating—all continuously adjustable
-          during a live session.</p>
+          <h4>Plate</h4>
+          <p>A resonant layer of the synth. Substrate moving is motion —
+          it is both a display and a feedback phenomenon for the project.</p>
         </div>
         <div class="feature-item">
-          <h4>Brown pan walk</h4>
-          <p>An Ornstein–Uhlenbeck 2-D random walk driven by audio energy,
-          producing organic, non-repeating spatial trajectories.</p>
-        </div>
-        <div class="feature-item">
-          <h4>Running normaliser</h4>
-          <p>Per-feature adaptive normalisation keeps the pipeline calibrated
-          to the current sound source without manual gain staging.</p>
-        </div>
-        <div class="feature-item">
-          <h4>OSC &amp; MIDI output</h4>
-          <p>Route any parameter to any address. Works with Resolume, TouchDesigner,
-          Reaper, Max/MSP, and any OSC-capable host.</p>
-        </div>
-        <div class="feature-item">
-          <h4>Batch mode</h4>
-          <p>Process audio files offline for previewing motion trajectories,
-          exporting CSV datasets, or training motion models.</p>
-        </div>
-        <div class="feature-item">
-          <h4>Evolutionary optimisation</h4>
-          <p>
-            DEAP-powered parameter search finds GMH configurations that best
-            reproduce a target motion profile—automated tuning across the full
-            geometry, medium, and hysteresis parameter space.
-          </p>
+          <h4>Lens-focus</h4>
+          <p>Focus adjusting driven by the hysteresis signal.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Projects ── -->
-  <section id="projects">
+  <!-- Work / illustrations -->
+  <section id="work">
     <div class="container">
-      <h3>Projects</h3>
-      <h2>The ecosystem</h2>
-      <p>
-        Two tools that work independently or together.
-      </p>
-
-      <div class="projects">
-        <div class="project-card">
-          <h4>Sonolumos</h4>
-          <p>
-            Audio-to-motion synthesis engine. Real-time streaming,
-            physics pipeline, OSC/MIDI output, interactive UI.
-            Python, fully open source.
-          </p>
-          <span class="tag">Open Source</span>&nbsp;
-          <span class="tag">Python</span>&nbsp;
-          <span class="tag">Real-time</span>
-          <br><br>
-          <a href="https://github.com/1kaab/sonolumos" class="btn btn-outline" target="_blank" rel="noopener">GitHub →</a>
-        </div>
-
-        <div class="project-card">
-          <h4>44</h4>
-          <p>
-            Motion database and Reaper plugin bridge. Records, indexes,
-            and replays motion trajectories inside a DAW session.
-            Pairs with Sonolumos for end-to-end audio-driven production.
-          </p>
-          <span class="tag">In Development</span>&nbsp;
-          <span class="tag">Reaper</span>
-          <br><br>
-          <a href="https://github.com/1kaab" class="btn btn-outline" target="_blank" rel="noopener">GitHub →</a>
-        </div>
+      <h3>work</h3>
+      <h2>screenshots</h2>
+      <p>A growing collection from sonolumos &amp; 44.</p>
+      <div class="illustration-grid">
+        <div class="illustration-slot">—</div>
+        <div class="illustration-slot">—</div>
+        <div class="illustration-slot">—</div>
+        <div class="illustration-slot">—</div>
+        <div class="illustration-slot">—</div>
+        <div class="illustration-slot">—</div>
       </div>
     </div>
   </section>
 
-  <!-- ── Open source ── -->
-  <section id="open-source">
-    <div class="container">
-      <h3>Open Source</h3>
-      <h2>Free to use,<br>free to modify</h2>
-      <p>
-        Sonolumos is released under the MIT license. Fork it, embed it,
-        build on top of it. The only ask is attribution.
-      </p>
-      <p>
-        Contributions are welcome—bug reports, feature requests, pull requests,
-        and documentation improvements all help move the project forward.
-      </p>
-      <div class="oss-badges">
-        <a href="https://github.com/1kaab/sonolumos" class="btn btn-outline" target="_blank" rel="noopener">GitHub — Sonolumos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Donate ── -->
-  <section id="donate">
-    <div class="container">
-      <h3>Support</h3>
-      <h2>Keep the work going</h2>
-      <p>
-        Both projects are developed independently, in spare time.
-        If they are useful to you, consider supporting continued development.
-      </p>
-
-      <div class="donate-options">
-        <div class="donate-card">
-          <h4>GitHub Sponsors</h4>
-          <p>
-            Monthly or one-time support through GitHub.
-            Zero friction if you already have an account—and it shows up
-            on the repository page.
-          </p>
-          <a href="https://github.com/sponsors/1kaab" class="btn btn-primary" target="_blank" rel="noopener">Sponsor on GitHub</a>
-        </div>
-
-        <div class="donate-card">
-          <h4>Bitcoin</h4>
-          <p>
-            Direct, no intermediary. Click the address below to copy it.
-          </p>
-          <button class="btc-address" id="btc-btn" onclick="copyBtc()" title="Click to copy">
-            bc1qplaceholderaddressgoeshere000000000000
-          </button>
-          <p class="copy-hint" id="btc-hint">click to copy address</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ── -->
   <footer>
     <div class="footer-inner">
-      <span class="footer-name">Sonolumos &amp; 44 — open source audio-motion tools</span>
+      <span class="footer-name">sonolumos</span>
       <ul class="footer-links">
-        <li><a href="https://github.com/1kaab/sonolumos" target="_blank" rel="noopener">Sonolumos</a></li>
-        <li><a href="https://github.com/1kaab" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="#donate">Support</a></li>
+        <li><a href="https://github.com/1kaab/sonolumos" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://github.com/1kaab" target="_blank" rel="noopener">1kaab</a></li>
       </ul>
     </div>
   </footer>
-
-  <script>
-    function copyBtc() {
-      const btn  = document.getElementById('btc-btn');
-      const hint = document.getElementById('btc-hint');
-      const addr = btn.textContent.trim();
-      navigator.clipboard.writeText(addr).then(() => {
-        hint.textContent = 'copied!';
-        setTimeout(() => { hint.textContent = 'click to copy address'; }, 2000);
-      }).catch(() => {
-        hint.textContent = 'select and copy manually';
-      });
-    }
-  </script>
 
 </body>
 </html>

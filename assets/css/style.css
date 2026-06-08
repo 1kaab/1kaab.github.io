@@ -372,3 +372,98 @@ footer {
   transition: color 0.15s;
 }
 .footer-links a:hover { color: var(--text); text-decoration: none; }
+
+/* ── Hero sig line ── */
+#hero .tagline { margin-bottom: 1.25rem; }
+
+.hero-sig {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+}
+
+/* ── Phase grid (Engine section) ── */
+.phase-grid {
+  margin-top: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.phase-item {
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.phase-item:last-child { border-bottom: none; }
+
+.phase-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.phase-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.phase-item p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ── Analogy block ── */
+.analogy {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+.analogy p {
+  font-size: 0.9rem;
+  font-style: italic;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* ── Illustrations ── */
+.illustration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .illustration-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.illustration-slot {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+}
+
+.illustration-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
